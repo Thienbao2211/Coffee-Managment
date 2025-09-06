@@ -1,0 +1,35 @@
+/* Universal Style */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+    height: 99vh;
+    margin: 0;
+}
+
+/* Image Cover */
+
+body {
+    background-image: url("../image/registerBackground.png");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+    /* Register Logo */
+
+.registerLogo {
+    width: 45%;
+}
+
+
+    /* Form */
+
+.registerInput {
+    background-color: rgb(31, 31, 31);
+    outline: none;
+}
