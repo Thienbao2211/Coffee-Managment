@@ -1,0 +1,61 @@
+/* Universal Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+/* Header */
+
+    /* Banner Image */
+
+.banner-group {
+    background-image: url(../image/bannerImage.png);
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+    /* Navbar */
+
+.navBar {
+    background-color: black;
+    opacity: 0.9;
+}
+
+        /* Title */
+
+.titleLogo {
+    width: 200px;
+}
+
+        /* Menu, Link */
+
+.nav {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+}
+
+.header .nav-link {
+    color: white !important;
+}
+
+.header .profile button {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+}
