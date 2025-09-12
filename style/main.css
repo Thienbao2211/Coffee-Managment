@@ -89,13 +89,15 @@ header {
 /* Footer */
 
 footer {
-    background-image: url(../image/bannerImage.png);
+    background-image: url(../image/footerImage.png);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 400px;
 }
 
 .item {
     color: white;
+    padding-top: 150px;
 }
 
 .item li {
