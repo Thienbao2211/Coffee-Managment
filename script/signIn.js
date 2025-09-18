@@ -26,7 +26,7 @@ let handleSignin = function (e) {
                     uid: user.uid,
                     email: user.email
                 },
-                expiry: Date.now() + 2 * 60 * 60 * 1000 // hết hạn sau 2 giờ
+                expiry: new Date().getTime() + 2 * 60 * 60 * 1000 // hết hạn sau 2 giờ
             };
 
             // Lưu vào localStorage
