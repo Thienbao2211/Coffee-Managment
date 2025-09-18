@@ -14,7 +14,10 @@
 /* Header */
 
 header {
-    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
 }
 
     /* Banner Image */
@@ -25,6 +28,7 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    margin-top: 0px;
 }
 
     /* Navbar */
@@ -32,7 +36,6 @@ header {
 .navBar {
     background-color: black;
     background-attachment: fixed;
-    opacity: 0.9;
 }
 
         /* Title */
@@ -69,7 +72,9 @@ header {
 /* Banner Text */
 
 .bannerText {
-    margin: 50px 0px 0px 150px;
+    top: 130px;
+    left: 140px;
+    position: absolute;
 }
 
 /* Product */
