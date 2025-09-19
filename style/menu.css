@@ -1,0 +1,100 @@
+/* Universal Style */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.page-wrapper {
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+}
+
+    /* Banner Image */
+
+.banner-group {
+    margin-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 0px;
+}
+
+    /* Navbar */
+
+.navBar {
+    background-color: black;
+    background-attachment: fixed;
+}
+
+        /* Title */
+
+.titleLogo {
+    width: 200px;
+}
+
+        /* Menu, Link */
+
+.nav {
+    display: flex;
+    font-size: 20px;
+    align-items: center;
+    list-style: none;
+}
+
+.nav-link {
+    display: block;
+    text-decoration: none;
+}
+
+.header .nav-link {
+    color: white !important;
+}
+
+.header .profile button {
+    background: none !important;
+    border: none !important;
+    color: white !important;
+}
+
+/* Product */
+
+.card {
+    width: 350px;
+    height: 200px;
+}
+
+.card img {
+    width: 100%;
+    height: 240px;
+    background-size: cover;
+    object-fit: cover;
+}
+
+/* Footer */
+
+footer {
+    background-image: url(../image/footerImage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+.item {
+    color: white;
+    padding-top: 150px;
+}
+
+.item li {
+    width: 400px;
+}

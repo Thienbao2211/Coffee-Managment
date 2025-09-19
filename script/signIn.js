@@ -30,7 +30,7 @@ let handleSignin = function (e) {
             };
 
             // Lưu vào localStorage
-            localStorage.setItem("userSession", JSON.stringify(userSession));
+            localStorage.setItem("user_session", JSON.stringify(userSession));
 
             // Chuyển hướng tới trang chủ
             window.location.href = "../view/main.html";

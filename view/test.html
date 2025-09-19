@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Menu</title>
 
     <!-- Boostrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -30,6 +30,7 @@
         gtag('config', 'G-GGZZE1BY7G');
     </script>
 
+
 </head>
 
 <body>
@@ -37,71 +38,46 @@
     <div class="order-form"></div>
 
     <div class="page-wrapper">
-        <div class="banner-group">
-            <header class="py-4">
-                <div class="container d-flex justify-content-between">
-                    <div class="logo">
-                        <img src="./src/img/logo.png" alt="">
+        <header class="py-4">
+            <div class="container d-flex justify-content-between">
+                <div class="logo">
+                    <img src="./src/img/logo.png" alt="">
+                </div>
+                <!-- code mới thêm ở đây -->
+                <div class="icon-dropdown">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                    <!-- <a href="#" class="close"></a> -->
+                </div>
+                <!-- end -->
+                <ul class="nav pe-4 align-items-center hidden">
+                    <li class="nav-item">
+                        <a href="/" class="nav-link">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/menu.html" class="nav-link">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/order.html" class="nav-link">
+                            <span></span>
+                            <i class="fa-light fa-bag-shopping icon"></i>
+                        </a>
+                    </li>
+                    <div class="profile">
+                        <button class="dropdown-toggle" type="button" id="profile-dropdown" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fa-light fa-user icon"></i>
+                        </button>
+                        <ul id="author-menu-drd" class="dropdown-menu" aria-labelledby="profile-dropdown">
+                            <li><a class="dropdown-item" href="/login.html">Đăng nhập</a></li>
+                            <li><a class="dropdown-item" href="/register.html">Đăng ký</a></li>
+                        </ul>
                     </div>
-                    <!-- code mới thêm ở đây -->
-                    <div class="icon-dropdown">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                        <!-- <a href="#" class="close"></a> -->
-                    </div>
-                    <!-- end -->
-                    <ul class="nav pe-4 align-items-center hidden">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Trang chủ</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/menu.html" class="nav-link">Menu</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="/order.html" class="nav-link">
-                                <span></span>
-                                <i class="fa-light fa-bag-shopping icon"></i>
-                            </a>
-                        </li>
-                        <div class="profile">
-                            <button class="dropdown-toggle" type="button" id="profile-dropdown"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <i class="fa-light fa-user icon"></i>
-                            </button>
-                            <ul id="author-menu-drd" class="dropdown-menu" aria-labelledby="profile-dropdown">
-                                <li><a class="dropdown-item" href="/login.html">Đăng nhập</a></li>
-                                <li><a class="dropdown-item" href="/register.html">Đăng ký</a></li>
-                            </ul>
-                        </div>
-                    </ul>
-                </div>
-            </header>
-
-            <div class="banner-text">
-                <h2 class="title text-white">Bắt đầu ngày với một tách <br> đen đá không đường...</h2>
-                <button class="btn-primary px-4 py-2 rounded-sm mt-4">Mua ngay</button>
+                </ul>
             </div>
+        </header>
 
-        </div>
-
-        <section class="container mt-4">
-            <div class="row align-items-center">
-                <div class="col-lg-6 col-12 text-center">
-                    <iframe class="rounded-md" width="560" height="315"
-                        src="https://www.youtube.com/embed/VJy4L5iAQNU?si=KWcVclns2UQjgKAi" title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="col-lg-6 col-12 text-center">
-                    <h2>Have a sip - Uống gì không?</h2>
-                    <p>Chào mừng các bạn đến với <i class="text-primary"><b>MindX Coffee</b></i>, nơi bạn có thể tận
-                        hưởng những tách cà phê thơm ngon và thư giãn trong không gian ấm cúng và hiện đại. Hãy đến với
-                        chúng tôi để trải nghiệm những giây phút thư giãn tuyệt vời cùng bạn bè và người thân!</p>
-                </div>
-            </div>
-        </section>
-        <section class="container">
-            <h3 class="my-4">Có gì mới nhất?</h3>
+        <section class="page-content container">
+            <h3 class="mt-4">Uống gì đây?</h3>
             <div class="product-list row py-4"></div>
         </section>
 
@@ -156,7 +132,7 @@
     <!-- Firebase -->
     <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-firestore-compat.js"></script>
-    
+
 
     <!-- Firebase Auth -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/10.13.1/firebase-auth-compat.min.js"
@@ -173,11 +149,12 @@
     <script>
         const productList = document.querySelector('.product-list');
         // Gọi hàm getProductList
-        getProductList(productList, 4)
+        getProductList(productList)
+
 
         // Sự kiện dropdown menu 
         const dropdown = document.querySelector(".icon-dropdown")
-        dropdown.addEventListener("click", function(){
+        dropdown.addEventListener("click", function () {
             document.getElementsByClassName("nav")[0].classList.toggle("hidden")
         })
     </script>

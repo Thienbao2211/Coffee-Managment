@@ -7,7 +7,7 @@ if (userSession) {
         // Hiển thị dropdown list sau khi đăng nhập
 
         profileDropdown.innerHTML = `
-            <li class="bg-grey-light><span class=dropdown-item">${userSession.user.providerData[0].email}</span></li>
+            <li class="bg-grey-light"><span class=dropdown-item">${userSession.user.email}</span></li>
             <li><a class="dropdown-item" href="../view/order.html">Đơn hàng</a></li>
             <li><a class="dropdown-item" href="../view/balance.html">Ví</a></li>
             <li><button id="logout-btn" class="btn btn-danger">Đăng xuất</button></li>
@@ -15,7 +15,7 @@ if (userSession) {
 
         // Xử lý đăng xuất
 
-        document.getElementsById('logout-btn').addEventListener('click', () => {
+        document.getElementById('logout-btn').addEventListener('click', () => {
             if (confirm("Bạn có chắc chắn muốn đăng xuất?")) {
                 firebase.auth().signOut().then(() => {
 
