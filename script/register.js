@@ -53,11 +53,10 @@ let handleRegister = function (e) {
         })
 
         .catch((error) => {
-                    let errorCode = error.code;
-                    let errorMessage = error.message;
-
-                    alert(`Lỗi: ${errorMessage}`);
-                    console.log(errorMessage);
+            let errorCode = error.code;
+            let errorMessage = error.message;
+            alert(`Lỗi: ${errorMessage}`);
+            console.log(errorMessage);
         })
 
 }
