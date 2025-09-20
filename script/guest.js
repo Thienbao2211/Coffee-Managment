@@ -27,7 +27,8 @@ if (userSession) {
 
                     window.location.href = "../view/signIn.html";
 
-                }).catch((error) => {
+                })
+                .catch((error) => {
                     let errorMessage = error.message;
                     alert(`Lỗi: ${errorMessage}`);
                     console.log(error);
