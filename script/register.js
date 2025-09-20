@@ -4,7 +4,7 @@ let passwordInput = document.querySelector(".passwordInput");
 let confirmpasswordInput = document.querySelector(".confirmpasswordInput");
 let submitBtn = document.querySelector(".submitBtn");
 
-let handleRegister = function (e) {
+let handleRegister = (e) => {
 
     e.preventDefault();
 
